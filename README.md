@@ -1,5 +1,10 @@
 # Checkpoint-scripts
 
-This script takes a list of users and creates accounts for them on the Check Point SmartDashBoard/SmartConsole using DBEDIT.
+This repository contains a series of CheckPoint scripts developed by Bruno Oliveira
 
-The script should be applied on the Security Management Server.
+########################################################
+BulkUserAdd.rb
+
+A script written in Ruby that takes a list of users as input and generates Check Point DBEDIT commands that should be processed by the Security Management Server in expert mode.
+
+########################################################

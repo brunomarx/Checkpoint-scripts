@@ -1,10 +1,13 @@
-
+#Version 0.1
 #This script takes a filename as a parameter.
+#Usage: #ruby BulkUserAdd.rb input.txt
+#The output file contains a series of DBEDIT commands that should
+# be first converted from DOS to unix if necessary.
+
 filename = ARGV.first
-
 text = open(filename)
-puts "Here is your filename #{filename}"
 
+#Function creates the commands for adding users in DBEDIT language and write them to the output file.
 def CreateUser(user)
   target = open("output.txt", 'a')
   target.write("create user #{user}")
@@ -14,6 +17,7 @@ def CreateUser(user)
   target.close
 end
 
+#Function opens the input file and generates commands for every line containing a user name.
 def ProcessFile(txt)
   target = open("output.txt", 'w')
   target.close
